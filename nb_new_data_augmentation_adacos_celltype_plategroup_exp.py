@@ -143,6 +143,15 @@ class CutMixCallback(LearnerCallback):
         x1, y1 = last_input[idx], last_target[idx]
         x1_cint = last_cint[idx] # x1_cint for mix!
         x1_pgint = last_pgint[idx] # x1_pgint for mix!
+        x1_exp = last_exp[idx] # x1_pgint for mix!
+        #if isinstance(last_cint, tuple):
+        #    x1_cint = last_cint[0][idx] # x1_cint for mix!
+        #    x1_pgint = last_pgint[0][idx] # x1_pgint for mix!
+        #    x1_exp = last_exp[0][idx] # x1_pgint for mix!
+        #else:
+        #    x1_cint = last_cint[idx] # x1_cint for mix!
+        #    x1_pgint = last_pgint[idx] # x1_pgint for mix!
+        #    x1_exp = last_exp[idx] # x1_pgint for mix!
         
         #Get new input
         last_input_size = last_input.size()
@@ -156,12 +165,13 @@ class CutMixCallback(LearnerCallback):
         ### NEW CINT & PGINT???
         new_cint = (last_cint, x1_cint, λ)
         new_pgint = (last_pgint, x1_pgint, λ)
-        new_last = (last_last, x1_last, λ)
+        new_exp = (last_exp, x1_exp, λ)
 
         # modify last target
         if self.stack_y:
             new_target = torch.cat([last_target.unsqueeze(1).float(), y1.unsqueeze(1).float(),
                                     λ.repeat(last_input_size[0]).unsqueeze(1).float()], 1)
+                                    #λ.repeat(last_input_size[0]).unsqueeze(1).unsqueeze(1).float()], 1)
         else:
             if len(last_target.shape) == 2:
                 λ = λ.unsqueeze(1).float()
