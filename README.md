@@ -30,7 +30,7 @@ For all training stages the [1cycle policy](https://sgugger.github.io/the-1cycle
   - [Complex network 12D](https://github.com/MicPie/recursion-cellular-image-classification/blob/master/rcic_v41_efficientnet-b3_celltype_plate-group-exp_12D.ipynb) (2x 6 channel images)
 - EfficientNet-B4 (not finished):
   - [Pretraining](https://github.com/MicPie/recursion-cellular-image-classification/blob/master/rcic_v43_efficientnet-b4_Mish_Ranger_LabelSmoothingLoss.ipynb)
-  - [Complex network 12D](https://github.com/MicPie/recursion-cellular-image-classification/blob/master/rcic_v44_efficientnet-b4_celltype_plate-group-exp_12D_model-exchange.ipynb)
+  - [Complex network 12D](https://github.com/MicPie/recursion-cellular-image-classification/blob/master/rcic_v44_efficientnet-b4_celltype_plate-group-exp_12D_model-exchange.ipynb) (2x 6 channel images)
 
 **What didn’t work out or had no impact over a more basic setup:**
 - Separate classifiers for celltypes and/or plategroups (i.e., siRNA groups of 277).
