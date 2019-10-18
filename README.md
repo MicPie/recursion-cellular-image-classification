@@ -23,6 +23,15 @@
 
 For all training stages the [1cycle policy](https://sgugger.github.io/the-1cycle-policy.html) was used for several cycles. EfficientNet training was carried out with AdamW. CutMix was used for the late training stages.
 
+**Notebooks:**
+- EfficientNet-B3 training:
+  - [Pretraining](https://github.com/MicPie/recursion-cellular-image-classification/blob/master/rcic_v20_efficientnet-b3.ipynb)
+  - [Complex network](https://github.com/MicPie/recursion-cellular-image-classification/blob/master/rcic_v32_efficientnet-b3_celltype_plate-group-exp_Full.ipynb)
+  - [Complex network 12D](https://github.com/MicPie/recursion-cellular-image-classification/blob/master/rcic_v41_efficientnet-b3_celltype_plate-group-exp_12D.ipynb) (2x 6 channel images)
+- EfficientNet-B4 (not finished):
+  - [Pretraining](https://github.com/MicPie/recursion-cellular-image-classification/blob/master/rcic_v43_efficientnet-b4_Mish_Ranger_LabelSmoothingLoss.ipynb)
+  - [Complex network 12D](https://github.com/MicPie/recursion-cellular-image-classification/blob/master/rcic_v44_efficientnet-b4_celltype_plate-group-exp_12D_model-exchange.ipynb)
+
 **What didn’t work out or had no impact over a more basic setup:**
 - Separate classifiers for celltypes and/or plategroups (i.e., siRNA groups of 277).
 - Some domain adaption techniques.
